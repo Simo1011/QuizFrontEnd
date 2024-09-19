@@ -12,11 +12,11 @@ const AppNavbar: React.FC = () => {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand href="/">Quiz App</Navbar.Brand>
+    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
+      <Navbar.Brand href="/" className="mx-auto">Quiz App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="ml-auto">
           <LinkContainer to="/" onClick={resetQuiz}>
             <Nav.Link>Take Quiz</Nav.Link>
           </LinkContainer>
