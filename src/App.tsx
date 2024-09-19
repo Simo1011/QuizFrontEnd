@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
+import SubjectList from './components/SubjectList';
+import QuizPage from './pages/QuizPage';
+import AddQuestionForm from './components/AddQuestionForm';
+import AppNavbar from './components/Navbar'; // Navbar
+import { QuizProvider } from './context/QuizContext'; // Context provider
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QuizProvider>
+      <Router>
+        <AppNavbar />
+        <Container>
+          <Routes>
+            {/* Route for Quiz Page */}
+            <Route
+              path="/"
+              element={
+                <Row>
+                  <Col md={4}>
+                    <SubjectList /> {/* List of subjects */}
+                  </Col>
+                  <Col md={8}>
+                    <QuizPage /> {/* Quiz-taking form */}
+                  </Col>
+                </Row>
+              }
+            />
+
+            {/* Route for Add Question Page */}
+            <Route
+              path="/add-question"
+              element={
+                <Row>
+                  <Col md={{ span: 6, offset: 3 }}>
+                    <AddQuestionForm /> {/* Form to add a new question */}
+                  </Col>
+                </Row>
+              }
+            />
+          </Routes>
+        </Container>
+      </Router>
+    </QuizProvider>
   );
-}
+};
 
 export default App;
