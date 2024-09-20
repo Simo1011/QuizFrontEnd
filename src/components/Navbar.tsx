@@ -12,16 +12,16 @@ const AppNavbar: React.FC = () => {
   };
 
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
-      <Navbar.Brand href="/" className="mx-auto">Quiz App</Navbar.Brand>
+    <Navbar className="custom-navbar" variant="dark" expand="lg">
+      <Navbar.Brand href="/" className="mx-auto brand-name">Quiz App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <LinkContainer to="/" onClick={resetQuiz}>
-            <Nav.Link>Take Quiz</Nav.Link>
+            <Nav.Link className="nav-link">Take Quiz</Nav.Link>
           </LinkContainer>
           <LinkContainer to="/add-question">
-            <Nav.Link>Add Questions</Nav.Link>
+            <Nav.Link className="nav-link">Add Questions</Nav.Link>
           </LinkContainer>
         </Nav>
       </Navbar.Collapse>

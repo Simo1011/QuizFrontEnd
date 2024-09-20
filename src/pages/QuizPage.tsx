@@ -37,7 +37,7 @@ const QuizPage: React.FC = () => {
     let correctCount = 0;
     questions.forEach((question) => {
       const userAnswer = selectedAnswers[question.id];
-      if (userAnswer === question.correctAnswer) {
+      if (userAnswer && userAnswer === question.correctAnswer) {  // Ensure correctAnswer is checked safely
         correctCount += 1;
       }
     });
@@ -56,7 +56,7 @@ const QuizPage: React.FC = () => {
   const successfulQuiz = score >= questions.length * 0.7; // For example, 70% or higher is a successful quiz
 
   const handleNext = () => {
-    if (currentPage < questions.length / questionsPerPage - 1) {
+    if (currentPage < Math.ceil(questions.length / questionsPerPage) - 1) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -72,7 +72,7 @@ const QuizPage: React.FC = () => {
 
   if (quizComplete) {
     return (
-      <div className="text-center mt-4">
+      <div className="main-content text-center mt-4">
         {/* Conditionally render confetti if the quiz is successful */}
         {successfulQuiz && <Confetti />}
 
@@ -98,11 +98,11 @@ const QuizPage: React.FC = () => {
   }
 
   if (!questions.length) {
-    return <div className="text-center mt-4">Please select a subject to take the quiz.</div>;
+    return <div className="main-content text-center mt-4">Please select a subject to take the quiz.</div>;
   }
 
   return (
-    <div className="mt-4">
+    <div className="main-content">
       <h4 className="text-center mb-4">Take the Quiz</h4>
       <Form onSubmit={handleSubmit}>
         {currentQuestions.map((question, index) => (
@@ -133,7 +133,7 @@ const QuizPage: React.FC = () => {
                 >
                   Previous
                 </Button>
-                {currentPage < questions.length / questionsPerPage - 1 ? (
+                {currentPage < Math.ceil(questions.length / questionsPerPage) - 1 ? (
                   <Button variant="primary" onClick={handleNext}>
                     Next
                   </Button>

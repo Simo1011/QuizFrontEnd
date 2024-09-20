@@ -1,22 +1,17 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f8fa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-body {
-  background-color: #f7f8fa;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2.display-4 {
-  color: #007bff;
+  color: #ffd000;
 }
 
 .card {
@@ -36,9 +31,77 @@ ul.list-unstyled {
 }
 
 ul.list-unstyled li {
-  background-color: #f1f1f1;
+  background-color: #ecbf64e1;
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
 }
 
+.custom-navbar {
+  background-color: #343a40;
+  border-bottom: 3px solid #ffc800b5;
+}
+
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: #f8f9fa !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #f8f9fa !important;
+}
+
+.nav-link:hover {
+  color: #ffbb00e8 !important;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+p, label, button, input {
+  font-weight: 400;
+}
+/* ===========================*/
+.main-content {
+  margin-top: 40px; /* Ensure enough space from the navbar */
+  padding: 20px;
+}
+
+.subject-list-container {
+  margin-top: 80px; /* Add margin to move it down from the navbar */
+}
+
+.subject-list-container h4 {
+  margin-bottom: 20px;
+}
+
+.subject-list-group {
+  list-style: none;
+  padding: 0;
+}
+
+.subject-list-group .list-group-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subject-list-group .list-group-item.active {
+  background-color: #ffcc80; /* Highlight color for selected subject */
+}
+
+.subject-list-group .list-group-item:hover {
+  background-color: #ffe0b2; /* Hover effect */
+}

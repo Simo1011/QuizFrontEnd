@@ -26,9 +26,9 @@ const SubjectList: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="subject-list-container">
       <h4>Select a Subject</h4>
-      <ListGroup>
+      <ListGroup className="subject-list-group">
         {subjects.map((subject) => (
           <ListGroup.Item
             key={subject.id}
