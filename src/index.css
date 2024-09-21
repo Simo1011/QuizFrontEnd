@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f8fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Roboto', sans-serif;
+}
+
+h2.display-4 {
+  color: #ffd000;
+}
+
+.card {
+  border: 1px solid #dee2e6;
+}
+
+button {
+  font-weight: bold;
+}
+
+.text-center {
+  margin: 20px 0;
+}
+
+ul.list-unstyled {
+  padding: 0;
+}
+
+ul.list-unstyled li {
+  background-color: #ecbf64e1;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.custom-navbar {
+  background-color: #343a40;
+  border-bottom: 3px solid #ffc800b5;
+}
+
+.brand-name {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  color: #f8f9fa !important;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  color: #f8f9fa !important;
+}
+
+.nav-link:hover {
+  color: #ffbb00e8 !important;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+p, label, button, input {
+  font-weight: 400;
+}
+/* ===========================*/
+.main-content {
+  margin-top: 40px; /* Ensure enough space from the navbar */
+  padding: 20px;
+}
+
+.subject-list-container {
+  margin-top: 80px; /* Add margin to move it down from the navbar */
+}
+
+.subject-list-container h4 {
+  margin-bottom: 20px;
+}
+
+.subject-list-group {
+  list-style: none;
+  padding: 0;
+}
+
+.subject-list-group .list-group-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subject-list-group .list-group-item.active {
+  background-color: #ffcc80; /* Highlight color for selected subject */
+}
+
+.subject-list-group .list-group-item:hover {
+  background-color: #ffe0b2; /* Hover effect */
+}
+.custom-button {
+  background-color: #ffbb00e8 !important;
+  border-color: #ffbb00e8 !important;
+  color: #ffffff !important; /* Adjust text color to your preference */
+  margin-right: 20px; 
+}
+
+.custom-button:hover {
+  background-color: #e0a500 !important; /* A slightly darker shade on hover */
+  border-color: #e0a500 !important;
+}
+/*========footer============*/
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #ffbb00e8; /* Custom color for footer links */
+}
+
+.footer a:hover {
+  color: #e0a500; /* Darker shade for hover effect */
+}
+/* adding subject form */
+.form-container {
+  margin-top: 0px; /* Adjust this value to move the card higher or lower */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* Adjust to prevent overflow */
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
