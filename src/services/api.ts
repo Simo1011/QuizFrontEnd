@@ -44,3 +44,13 @@ export const addQuestionToSubject = async (subjectId: number, question: any) => 
     throw error;
   }
 };
+
+
+// Function to create a subject with JSON content-type
+export const createSubject = async (subject: { name: string }) => {
+  return await axios.post(`${API_BASE_URL}/subjects`, subject, {
+    headers: {
+      'Content-Type': 'application/json',  // Ensure content-type is set to JSON
+    },
+  });
+};

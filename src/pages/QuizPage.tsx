@@ -87,10 +87,10 @@ const QuizPage: React.FC = () => {
           ))}
         </ul>
         {/* Retake Quiz and Select New Subject Buttons */}
-        <Button variant="primary" onClick={handleRetakeQuiz} className="mt-3">
+        <Button variant="primary" onClick={handleRetakeQuiz} className="custom-button">
           Retake Quiz
         </Button>
-        <Button variant="secondary" onClick={() => setSelectedSubjectId(null)} className="mt-3 ml-2">
+        <Button variant="secondary" onClick={() => setSelectedSubjectId(null)} className="custom-button">
           Choose a New Subject
         </Button>
       </div>
@@ -134,11 +134,11 @@ const QuizPage: React.FC = () => {
                   Previous
                 </Button>
                 {currentPage < Math.ceil(questions.length / questionsPerPage) - 1 ? (
-                  <Button variant="primary" onClick={handleNext}>
+                  <Button variant="primary" onClick={handleNext} className="custom-button">
                     Next
                   </Button>
                 ) : (
-                  <Button type="submit" variant="primary">
+                  <Button type="submit" variant="primary" className='custom-button'>
                     Submit Quiz
                   </Button>
                 )}

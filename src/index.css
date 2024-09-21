@@ -105,3 +105,42 @@ p, label, button, input {
 .subject-list-group .list-group-item:hover {
   background-color: #ffe0b2; /* Hover effect */
 }
+.custom-button {
+  background-color: #ffbb00e8 !important;
+  border-color: #ffbb00e8 !important;
+  color: #ffffff !important; /* Adjust text color to your preference */
+  margin-right: 20px; 
+}
+
+.custom-button:hover {
+  background-color: #e0a500 !important; /* A slightly darker shade on hover */
+  border-color: #e0a500 !important;
+}
+/*========footer============*/
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #ffbb00e8; /* Custom color for footer links */
+}
+
+.footer a:hover {
+  color: #e0a500; /* Darker shade for hover effect */
+}
+/* adding subject form */
+.form-container {
+  margin-top: 0px; /* Adjust this value to move the card higher or lower */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* Adjust to prevent overflow */
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
