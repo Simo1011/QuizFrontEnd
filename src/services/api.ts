@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //const API_BASE_URL = 'http://localhost:8080/api';
 
-const API_BASE_URL = 'http://localhost:8082/api';
+const API_BASE_URL = 'http://18.220.161.171:8082/api';
 // Fetch all subjects
 export const getAllSubjects = async () => {
   try {
