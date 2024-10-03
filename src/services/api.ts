@@ -2,9 +2,11 @@ import axios from 'axios';
 //this used localy
 //const API_BASE_URL = 'http://localhost:8080/api';
 
-const API_BASE_URL = 'http://18.220.161.171:8082/api';
+//const API_BASE_URL = 'http://18.220.161.171:8082/api';
 
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 // Fetch all subjects
+console.log('API Base URL:', API_BASE_URL);  // Add this line
 export const getAllSubjects = async () => {
   try {
     const response = await axios.get(`${API_BASE_URL}/subjects`);
